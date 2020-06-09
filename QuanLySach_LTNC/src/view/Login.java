@@ -123,6 +123,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(staffRbtn);
+        staffRbtn.setSelected(true);
         staffRbtn.setText("Staff");
         staffRbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
