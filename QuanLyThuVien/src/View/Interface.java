@@ -87,7 +87,6 @@ public class Interface extends javax.swing.JFrame {
         refreshBtn = new javax.swing.JButton();
         bookTab = new javax.swing.JPanel();
         billTab = new javax.swing.JPanel();
-        reportTab = new javax.swing.JPanel();
         adminTab = new javax.swing.JPanel();
         staffTab = new javax.swing.JPanel();
         customerTab = new javax.swing.JPanel();
@@ -116,6 +115,8 @@ public class Interface extends javax.swing.JFrame {
         cSearchField = new javax.swing.JTextField();
         cSearchBox = new javax.swing.JComboBox<>();
         cSearchBtn = new javax.swing.JButton();
+        reportTab = new javax.swing.JPanel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -249,7 +250,7 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(wdateInfo))
                 .addGap(48, 48, 48)
                 .addComponent(refreshBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(logoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -264,7 +265,7 @@ public class Interface extends javax.swing.JFrame {
         );
         bookTabLayout.setVerticalGroup(
             bookTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 429, Short.MAX_VALUE)
         );
 
         home.addTab("Book", bookTab);
@@ -277,23 +278,10 @@ public class Interface extends javax.swing.JFrame {
         );
         billTabLayout.setVerticalGroup(
             billTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 429, Short.MAX_VALUE)
         );
 
         home.addTab("Bill", billTab);
-
-        javax.swing.GroupLayout reportTabLayout = new javax.swing.GroupLayout(reportTab);
-        reportTab.setLayout(reportTabLayout);
-        reportTabLayout.setHorizontalGroup(
-            reportTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 716, Short.MAX_VALUE)
-        );
-        reportTabLayout.setVerticalGroup(
-            reportTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
-        );
-
-        home.addTab("Report", reportTab);
 
         javax.swing.GroupLayout adminTabLayout = new javax.swing.GroupLayout(adminTab);
         adminTab.setLayout(adminTabLayout);
@@ -316,7 +304,7 @@ public class Interface extends javax.swing.JFrame {
         );
         staffTabLayout.setVerticalGroup(
             staffTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 429, Short.MAX_VALUE)
         );
 
         home.addTab("Staff", staffTab);
@@ -497,6 +485,25 @@ public class Interface extends javax.swing.JFrame {
 
         home.addTab("Customer", customerTab);
 
+        javax.swing.GroupLayout reportTabLayout = new javax.swing.GroupLayout(reportTab);
+        reportTab.setLayout(reportTabLayout);
+        reportTabLayout.setHorizontalGroup(
+            reportTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(reportTabLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(594, Short.MAX_VALUE))
+        );
+        reportTabLayout.setVerticalGroup(
+            reportTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(reportTabLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(332, Short.MAX_VALUE))
+        );
+
+        home.addTab("Report", reportTab);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -644,6 +651,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JTabbedPane home;
     private javax.swing.JLabel idInfo;
     private javax.swing.JLabel idLabel;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logoutBtn;
     private javax.swing.JLabel membershipLabel;
