@@ -9,7 +9,6 @@ package Model;
  *
  * @author dell
  */
-public class Report extends Bills{
-    private String haizString;
+public class Bills {
     
 }
