@@ -779,10 +779,10 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
-                    <StringItem index="0" value="Doanh thu"/>
-                    <StringItem index="1" value="S&#x1ed1; th&#x1ebb; &#x111;&#x103;ng k&#xfd; m&#x1edb;i"/>
-                    <StringItem index="2" value="S&#xe1;ch &#x111;&#xe3; &#x111;&#x1b0;&#x1ee3;c m&#x1b0;&#x1ee3;n theo th&#x1ec3; lo&#x1ea1;i"/>
-                    <StringItem index="3" value="S&#x1ed1; l&#x1b0;&#x1ee3;ng s&#xe1;ch &#x111;&#xe3; m&#x1b0;&#x1ee3;n"/>
+                    <StringItem index="0" value="Monthly revenue"/>
+                    <StringItem index="1" value="Daily bills"/>
+                    <StringItem index="2" value="New registers"/>
+                    <StringItem index="3" value="Most borrowed category"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -800,16 +800,16 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
-                    <StringItem index="0" value="Doanh thu"/>
-                    <StringItem index="1" value="S&#x1ed1; th&#x1ebb; &#x111;&#x103;ng k&#xfd; m&#x1edb;i"/>
-                    <StringItem index="2" value="S&#xe1;ch &#x111;&#xe3; &#x111;&#x1b0;&#x1ee3;c m&#x1b0;&#x1ee3;n theo th&#x1ec3; lo&#x1ea1;i"/>
-                    <StringItem index="3" value="S&#x1ed1; l&#x1b0;&#x1ee3;ng s&#xe1;ch &#x111;&#xe3; m&#x1b0;&#x1ee3;n"/>
+                    <StringItem index="0" value="Monthly revenue"/>
+                    <StringItem index="1" value="Daily bills"/>
+                    <StringItem index="2" value="New registers"/>
+                    <StringItem index="3" value="Most borrowed category"/>
                   </StringArray>
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jComboBox1.setModel(new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;a&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot; }));"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="//jComboBox1.setModel(new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;a&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot; }));"/>
               </AuxValues>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
@@ -828,6 +828,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Show"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>

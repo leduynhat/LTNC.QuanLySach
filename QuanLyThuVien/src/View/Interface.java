@@ -7,13 +7,28 @@ package View;
 
 import Controller.CustomerController;
 import Controller.ProfileController;
+import Controller.ReportController;
+import Model.Bills;
+import Model.ThongKeImpl;
+import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -503,14 +518,14 @@ public class Interface extends javax.swing.JFrame {
 
         home.addTab("Customer", customerTab);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doanh thu", "Số thẻ đăng ký mới", "Sách đã được mượn theo thể loại", "Số lượng sách đã mượn" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Monthly revenue", "Daily bills", "New registers", "Most borrowed category" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doanh thu", "Số thẻ đăng ký mới", "Sách đã được mượn theo thể loại", "Số lượng sách đã mượn" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Monthly revenue", "Daily bills", "New registers", "Most borrowed category" }));
 
         jButton1.setText("Show");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -520,6 +535,11 @@ public class Interface extends javax.swing.JFrame {
         });
 
         jButton2.setText("Show");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("From");
 
@@ -647,7 +667,7 @@ public class Interface extends javax.swing.JFrame {
         reportTabLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jComboBox1, jComboBox2});
 
         //jComboBox2.setSelectedIndex(2);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "Item 2", "Item 3", "Item 4" }));
+        //jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "Item 2", "Item 3", "Item 4" }));
 
         home.addTab("Report", reportTab);
 
@@ -724,6 +744,72 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        SimpleDateFormat form = new SimpleDateFormat("yyyy-MM-dd");
+        String startString = form.format(jDateChooser1.getDate());
+        String stopString = form.format(jDateChooser2.getDate());
+        System.out.println(startString +"  " + stopString);
+        ReportController reportController = new ReportController();
+        int ChartIndex = 0;
+        ChartIndex = jComboBox2.getSelectedIndex();
+        System.out.println(ChartIndex);
+        switch(ChartIndex){
+            case 0:        
+                reportController.setDataToChart1(jPanel3, startString, stopString);
+                break;
+            case 1:
+                reportController.setDataToChart2(jPanel3, startString, stopString);
+                break;
+            case 2:
+                reportController.setDataToChart3(jPanel3, startString, stopString);
+                break;
+            case 3: 
+                reportController.setDataToChart1(jPanel3, startString, stopString);
+                break;
+            case 4: 
+                reportController.setDataToChart1(jPanel3, startString, stopString);
+                break;
+            default: break;
+        }
+//        Connection cons = model.dBConnect.getConnect();
+//        String sql = "SELECT COUNT(*) AS sum,  SUM(price) AS price, DATE(issuesDate) AS day  FROM `bill` WHERE issuesDate BETWEEN '"+ startString  +"' AND '" + stopString + "' GROUP BY DATE(issuesDate)";
+//        List<Bills> list = new ArrayList<>();
+//        try {
+//            PreparedStatement ps =  cons.prepareStatement(sql);
+//            System.out.println(ps);
+//            ResultSet rs = ps.executeQuery();
+//            while(rs.next()){
+//                Bills bill = new Bills();
+//                bill.setIssuesDate(rs.getString("day"));
+//                bill.setSum_bill(rs.getInt("sum"));
+//                bill.setSum_price(rs.getInt("price"));
+//                System.out.println(bill.getIssuesDate() + " " + bill.getSum_bill() + " " + bill.getSum_price() );
+//                list.add(bill);
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        
+//        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+//        if(list != null){
+//            for(Bills item : list){
+//                dataset.addValue(item.getSum_price(),"Bills", item.getIssuesDate());
+//            }
+//        }
+//        JFreeChart barChart = ChartFactory.createBarChart(
+//                "Chart of new bills".toUpperCase(),
+//                "Day",
+//                "Amount",
+//                dataset,
+//                PlotOrientation.VERTICAL,false,true,false
+//        );
+//        ChartPanel chartPanel = new ChartPanel(barChart);
+//        chartPanel.setPreferredSize(new Dimension(jPanel3.getMinimumSize()));
+//        
+//        jPanel3.removeAll();
+//        jPanel3.setLayout(new CardLayout());
+//        jPanel3.add(chartPanel);
+//        jPanel3.validate();
+//        jPanel3.repaint();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
@@ -738,6 +824,36 @@ public class Interface extends javax.swing.JFrame {
         this.dispose();
         LoginOption.getInstance().setVisible(true);
     }//GEN-LAST:event_logoutBtnActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        SimpleDateFormat form = new SimpleDateFormat("yyyy-MM-dd");
+        String startString = form.format(jDateChooser3.getDate());
+        String stopString = form.format(jDateChooser4.getDate());
+        System.out.println(startString +"  " + stopString);
+        ReportController reportController = new ReportController();
+        int ChartIndex = 0;
+        ChartIndex = jComboBox1.getSelectedIndex();
+        System.out.println(ChartIndex);
+        switch(ChartIndex){
+            case 0:        
+                reportController.setDataToChart1(jPanel4, startString, stopString);
+                break;
+            case 1:
+                reportController.setDataToChart2(jPanel4, startString, stopString);
+                break;
+            case 2:
+                reportController.setDataToChart3(jPanel4, startString, stopString);
+                break;
+            case 3: 
+                reportController.setDataToChart1(jPanel4, startString, stopString);
+                break;
+            case 4: 
+                reportController.setDataToChart1(jPanel3, startString, stopString);
+                break;
+            default: break;
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
