@@ -3,24 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Controller/ReportController.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/quanlythuvien/QuanLyThuVien.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/BillDetail.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/Book.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/View/Login.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Controller/StaffController.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Controller/LoginController.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/ThongKeImpl.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/Staff.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/View/LoginOption.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/Customers.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/ThongKe.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/dBConnect.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Model/Bills.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Controller/CustomerController.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/View/Interface.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Controller/ProfileController.java</file>
-            <file>file:/D:/Nhat/Java/Lap_trinh_nang_cao/Git_repo/LTNC.QuanLySach/QuanLyThuVien/src/Controller/SearchController.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/View/DisplayBill.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Controller/ProfileController.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Model/Report.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Model/Book.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/View/Interface.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/View/AddCustomer.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Model/dBConnect.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Model/Customers.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Model/ReportImp.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Controller/ReportController.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/View/AddBillDetail.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/Model/Bills.java</file>
+            <file>file:/C:/Users/dell/Downloads/Compressed/LTNC.QuanLySach-master/QuanLyThuVien/src/quanlythuvien/QuanLyThuVien.java</file>
         </group>
     </open-files>
 </project-private>

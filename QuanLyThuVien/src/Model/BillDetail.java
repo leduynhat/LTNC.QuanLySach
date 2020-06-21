@@ -11,31 +11,16 @@ package Model;
  */
 public class BillDetail {
     private int amount;
-    private int BillId;
-    private String BookId;
-    
+    private String ID;
     public void setbookid(String ID) {
-       this.BookId = BookId;
+       this.ID = ID;
     }
+    private int totalprice;
+    public void gettotalprice(int totalprice){
+         this.totalprice=totalprice;
+    }
+   
     public void setamount(int a) {
         this.amount= a;
     }
-
-    public void setBillId(int BillId) {
-        this.BillId = BillId;
-    }
-    
-    public int getAmount() {
-        return amount;
-    }
-
-    public int getBillId() {
-        return BillId;
-    }
-
-    public String getBookId() {
-        return BookId;
-    }
-    
-    
 }

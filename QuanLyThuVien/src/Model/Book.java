@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package model;
 
 import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.time.Year;

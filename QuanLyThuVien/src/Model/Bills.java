@@ -5,7 +5,6 @@
  */
 package Model;
 
-import java.sql.Timestamp;
 /**
  *
  * @author dell

@@ -7,11 +7,10 @@ package Controller;
 
 import Model.Bills;
 import Model.Customers;
-import Model.ThongKe;
-import Model.ThongKeImpl;
+import Model.Report;
+import Model.ReportImp;
 import java.awt.CardLayout;
 import java.awt.Dimension;
-import java.sql.Timestamp;
 import java.util.List;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
@@ -25,13 +24,13 @@ import org.jfree.data.category.DefaultCategoryDataset;
  * @author dell
  */
 public class ReportController {
-    private ThongKe thongKe = null;
+    private Report report = null;
     
     public ReportController(){
-        this.thongKe = new ThongKeImpl();
+        this.report = new ReportImp();
     }
     public void setDataToChart2(JPanel jPanel, String startTimestamp, String stopTimestamp){
-        List<Bills> listItem = thongKe.getListByBills(startTimestamp, stopTimestamp);
+        List<Bills> listItem = report.getListByBills(startTimestamp, stopTimestamp);
         
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         if(listItem != null){
@@ -56,7 +55,7 @@ public class ReportController {
         jPanel.repaint();
     }
     public void setDataToChart1(JPanel jPanel, String startTimestamp, String stopTimestamp){
-        List<Bills> listItem = thongKe.getListByBills(startTimestamp, stopTimestamp);
+        List<Bills> listItem = report.getListByBills(startTimestamp, stopTimestamp);
         
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         if(listItem != null){
@@ -81,7 +80,7 @@ public class ReportController {
         jPanel.repaint();
     }
     public void setDataToChart3(JPanel jPanel, String startTimestamp, String stopTimestamp){
-        List<Customers> listItem = thongKe.getListbyCustomer(startTimestamp, stopTimestamp);
+        List<Customers> listItem = report.getListbyCustomer(startTimestamp, stopTimestamp);
         
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         if(listItem != null){
@@ -98,7 +97,7 @@ public class ReportController {
         );
         ChartPanel chartPanel = new ChartPanel(barChart);
         chartPanel.setPreferredSize(new Dimension(jPanel.getMinimumSize()));
-        
+//        chartPanel.get
         jPanel.removeAll();
         jPanel.setLayout(new CardLayout());
         jPanel.add(chartPanel);
@@ -106,7 +105,7 @@ public class ReportController {
         jPanel.repaint();
     }
     public void setDataToChart4(JPanel jPanel, String startTimestamp, String stopTimestamp){
-        List<Bills> listItem = thongKe.getListByBills(startTimestamp, stopTimestamp);
+        List<Bills> listItem = report.getListByBills(startTimestamp, stopTimestamp);
         
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         if(listItem != null){
